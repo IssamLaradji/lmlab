@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llmlab"
+version = "0.3.0"
+description = "A simple wrapper for useful llm libraries"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "pymupdf",
+    "python-docx",
+    "pandas",
+    "openpyxl",
+    "tiktoken",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lmlab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
